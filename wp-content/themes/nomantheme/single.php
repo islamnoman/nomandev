@@ -20,7 +20,8 @@ get_header(); ?>
 								
 								while( have_posts() ): the_post();
 									
-									noman_save_post_views( get_the_ID() );
+									noman_save_post_views( get_posts() );
+									// noman_save_post_views( get_the_ID() );
 									
 									get_template_part( 'template-parts/single', get_post_format() );
 									
